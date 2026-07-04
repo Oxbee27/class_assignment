@@ -72,7 +72,7 @@ if(this.amount < amount){
     return
 }
 this.amount -= amount
- receiverAccountNumber.amount += amount
+ receiverAccount.amount += amount
 
 }
 
@@ -100,7 +100,7 @@ deactivateAccount(){
 
 }
 
- let account1 = new BankAccount("Oxbee", 1000000, "savings")
+let account1 = new BankAccount("Oxbee", 1000000, "savings")
 let account2 = new BankAccount("Bigwig", 500000, "current")
 let account3 = new BankAccount("Moses", 200000, "savings")
 account1.transfer(account1, 40000)
