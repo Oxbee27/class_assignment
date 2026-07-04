@@ -35,3 +35,21 @@ console.log("This account is deactivated. you can not withdraw")
 return;
 
 }
+if(this.amount >= amount){
+    this.amount -= amount
+}else{
+    return "insufficient balance"
+}
+
+}
+
+transfer(receiverAccount, amount){
+if(this.isFrozen){
+console.log("account is frozen can not make a transfer")
+return;
+}
+if(this.isDeactivated){
+console.log("This account is deactivated. you can not make a transfer")
+return;
+
+}
