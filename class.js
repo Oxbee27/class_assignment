@@ -25,3 +25,13 @@ return;
 }
     this.amount += money
  }
+ withdraw(amount){
+    if(this.isFrozen){
+console.log("account is frozen can not withdraw")
+return;
+}
+if(this.isDeactivated){
+console.log("This account is deactivated. you can not withdraw")
+return;
+
+}
