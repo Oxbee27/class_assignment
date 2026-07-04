@@ -71,3 +71,31 @@ if(this.amount < amount){
     console.log("insufficient balance")
     return
 }
+this.amount -= amount
+ receiverAccountNumber.amount += amount
+
+}
+
+freezeAccount(){
+this.isFrozen = true
+
+}
+
+setAccountType(accounType){
+if(accounType === "savings" || accounType === "current") {
+     this.accountType = accounType
+
+}else{
+    console.log(
+
+        "invalid account type"
+    ) 
+}
+
+}
+
+deactivateAccount(){
+    this.isDeactivated = true
+}
+
+}
