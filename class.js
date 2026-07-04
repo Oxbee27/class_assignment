@@ -53,3 +53,21 @@ console.log("This account is deactivated. you can not make a transfer")
 return;
 
 }
+if(amount <= 0){
+console.log("invalid amount")
+return;
+
+}
+if(!receiverAccount){
+console.log("Account does not exist")
+return;
+}
+if(this === receiverAccount){
+console.log("you can not transfer to yourself")
+return;
+
+}
+if(this.amount < amount){
+    console.log("insufficient balance")
+    return
+}
