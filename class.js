@@ -43,7 +43,10 @@ if(this.amount >= amount){
 
 }
 
+
+
 transfer(receiverAccount, amount){
+
 if(this.isFrozen){
 console.log("account is frozen can not make a transfer")
 return;
@@ -58,7 +61,7 @@ console.log("invalid amount")
 return;
 
 }
-if(!receiverAccount){
+if(!(receiverAccount instanceof BankAccount)){
 console.log("Account does not exist")
 return;
 }
@@ -103,12 +106,12 @@ deactivateAccount(){
 let account1 = new BankAccount("Oxbee", 1000000, "savings")
 let account2 = new BankAccount("Bigwig", 500000, "current")
 let account3 = new BankAccount("Moses", 200000, "savings")
-account1.transfer(account1, 40000)
-account1.deactivateAccount()
-console.log(account1)
-account1.setAccountType()
-account1.freezeAccount()
-account1.deposit(100000)
-account1.withdraw(50000)
-console.log(account1.amount)
+account1.transfer(account2, 40000)
+// account1.deactivateAccount()
+// console.log(account1)
+// account1.setAccountType()
+// account1.freezeAccount()
+// account1.deposit(100000)
+// account1.withdraw(50000)
+// console.log(account1.amount)
 console.log(account1)
