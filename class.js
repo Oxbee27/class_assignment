@@ -5,7 +5,7 @@ constructor(name, amount, accountType){
     this.amount = amount
     this.accountNumber = this.generateAccountNumber()
     this.isFrozen = false
-    this.setAccountType(accountType)
+    this.setAccountTypes(accountType)
     this.isDeactivated = false
 
 }
@@ -82,7 +82,8 @@ this.isFrozen = true
 
 }
 
-setAccountType(accountType){
+setAccountTypes(accountType){
+    accountType = accountType.toLowerCase()
 if(accountType === "savings" || accountType === "current") {
      this.accountType = accountType
 
