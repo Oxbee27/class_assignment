@@ -1,11 +1,11 @@
 class BankAccount  {
-constructor(name, amount, accounType){
+constructor(name, amount, accountType){
 
     this.name = name
     this.amount = amount
     this.accountNumber = this.generateAccountNumber()
     this.isFrozen = false
-    this.setAccountType(accounType)
+    this.setAccountType(accountType)
     this.isDeactivated = false
 
 }
@@ -42,8 +42,6 @@ if(this.amount >= amount){
 }
 
 }
-
-
 
 transfer(receiverAccount, amount){
 
@@ -84,9 +82,9 @@ this.isFrozen = true
 
 }
 
-setAccountType(accounType){
-if(accounType === "savings" || accounType === "current") {
-     this.accountType = accounType
+setAccountType(accountType){
+if(accountType === "savings" || accountType === "current") {
+     this.accountType = accountType
 
 }else{
     console.log(
